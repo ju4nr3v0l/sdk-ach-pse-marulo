@@ -1,5 +1,5 @@
 {
-    "name": "pse/integration-sdk",
+    "name": "epayco/sdk-ach-pse-epayco",
     "type": "library",
     "description": "SDK for PSE integration",
     "require": {
