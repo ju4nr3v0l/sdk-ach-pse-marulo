@@ -77,7 +77,11 @@ class CreateTransactionPaymentRequest
         string $address,
         string $email,
         string $beneficiaryIdentificationType,
-        string $beneficiaryIdentification
+        string $beneficiaryIdentification,
+        string $beneficiaryEntityIdentificationType,
+        string $beneficiaryEntityIdentification,
+        string $beneficiaryEntityName,
+        int $beneficiaryEntityCIIUCategory
     )
     {
         $this->entityCode = $entityCode;
@@ -101,5 +105,9 @@ class CreateTransactionPaymentRequest
         $this->email = $email;
         $this->beneficiaryIdentificationType = $beneficiaryIdentificationType;
         $this->beneficiaryIdentification = $beneficiaryIdentification;
+        $this->beneficiaryEntityIdentificationType = $beneficiaryEntityIdentificationType;
+        $this->beneficiaryEntityIdentification =   $beneficiaryEntityIdentification;
+        $this->beneficiaryEntityName =  $beneficiaryEntityName;
+        $this->beneficiaryEntityCIIUCategory = $beneficiaryEntityCIIUCategory;
     }
 }
