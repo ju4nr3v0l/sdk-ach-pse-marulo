@@ -57,57 +57,12 @@ class CreateTransactionPaymentRequest
     public $indicator4per1000;
 
     public function __construct(
-        string $entityCode,
-        string $financialInstitutionCode,
-        string $serviceCode,
-        float $transactionValue,
-        float $vatValue,
-        int $ticketId,
-        string $entityurl,
-        string $userType,
-        string $referenceNumber1,
-        string $referenceNumber2,
-        string $referenceNumber3,
-        string $soliciteDate,
-        string $paymentDescription,
-        string $identificationType,
-        string $identificationNumber,
-        string $fullName,
-        string $cellphoneNumber,
-        string $address,
-        string $email,
-        string $beneficiaryIdentificationType,
-        string $beneficiaryIdentification,
-        string $beneficiaryEntityIdentificationType,
-        string $beneficiaryEntityIdentification,
-        string $beneficiaryEntityName,
-        int $beneficiaryEntityCIIUCategory
+        array $options=array()
     )
     {
-        $this->entityCode = $entityCode;
-        $this->financialInstitutionCode = $financialInstitutionCode;
-        $this->serviceCode = $serviceCode;
-        $this->transactionValue = $transactionValue;
-        $this->vatValue = $vatValue;
-        $this->ticketId = $ticketId;
-        $this->entityurl = $entityurl;
-        $this->userType = $userType;
-        $this->referenceNumber1 = $referenceNumber1;
-        $this->referenceNumber2 = $referenceNumber2;
-        $this->referenceNumber3 = $referenceNumber3;
-        $this->soliciteDate = $soliciteDate;
-        $this->paymentDescription = $paymentDescription;
-        $this->identificationType = $identificationType;
-        $this->identificationNumber = $identificationNumber;
-        $this->fullName = $fullName;
-        $this->cellphoneNumber = $cellphoneNumber;
-        $this->address = $address;
-        $this->email = $email;
-        $this->beneficiaryIdentificationType = $beneficiaryIdentificationType;
-        $this->beneficiaryIdentification = $beneficiaryIdentification;
-        $this->beneficiaryEntityIdentificationType = $beneficiaryEntityIdentificationType;
-        $this->beneficiaryEntityIdentification =   $beneficiaryEntityIdentification;
-        $this->beneficiaryEntityName =  $beneficiaryEntityName;
-        $this->beneficiaryEntityCIIUCategory = $beneficiaryEntityCIIUCategory;
+        foreach($options as $key => $value)
+        {
+            $this->{$key}=$value;
+        }
     }
 }
