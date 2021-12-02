@@ -11,6 +11,7 @@ use \PSEIntegration\Models\FinalizeTransactionPaymentRequest;
 use \PSEIntegration\Models\FinalizeTransactionPaymentResponse;
 use \PSEIntegration\Models\TransactionInformationRequest;
 use \PSEIntegration\Models\TransactionInformationResponse;
+use \PSEIntegration\Models\CreateTransactionPaymentMulticreditRequest;
 
 use \PSEIntegration\Models\Bank;
 
@@ -149,6 +150,12 @@ class ApigeeServices
     {
         $this->login();
         return $this->sendRequest("CreateTransactionPaymentNF", $request, new CreateTransactionPaymentResponse());
+    }
+
+    public function createTransactionPaymentMulticredit(CreateTransactionPaymentMulticreditRequest $request)
+    {
+        $this->login();
+        return $this->sendRequest("createTransactionPaymentMulticreditNF", $request, new CreateTransactionPaymentResponse());
     }
 
     public function finalizeTransactionPayment(FinalizeTransactionPaymentRequest $request)
